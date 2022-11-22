@@ -21,7 +21,7 @@ void command4(string Al1, string Al2, string InputFile)
 	ifstream fin(InputFile);
 	if (!fin)
 	{
-		cout << "Cn not read file" << endl;
+		cout << "Can not read file" << endl;
 		return;
 	}
 	int n; fin >> n;
@@ -35,11 +35,11 @@ void command4(string Al1, string Al2, string InputFile)
 	cout << "Inputfile: " << InputFile << endl;
 	cout << "InputSize: " << n << endl;
 	int x1 = 0, x2 = 0;// stand for type of Sort
-	for (int x1 = 0; x1 < 11; x1++)
+	for (x1 = 0; x1 < 11; x1++)
 		if (sort_names[x1] == Al1)
 			break;
-	for (int x2 = 0; x2 < 11; x2++)
-		if (sort_names[x2] == Al1)
+	for (x2 = 0; x2 < 11; x2++)
+		if (sort_names[x2] == Al2)
 			break;
 	clock_t start1, end1, start2, end2;
 	double time1 = 0, time2 = 0;
@@ -54,8 +54,9 @@ void command4(string Al1, string Al2, string InputFile)
 	cout << "Runtime: " << time1 << " | " << time2 << endl;
 
 	// Comparison
-	long long int com1 = 0, com2 = 0;
+	long long int com1 = 0;
 	COUNT_SortAl(c, n, x1, com1);
+	long long int com2 = 0;
 	COUNT_SortAl(d, n, x2, com2);
 	cout << "Comparisons: " << com1 << " | " << com2 << endl;
 }
@@ -72,11 +73,11 @@ void command5(string Al1, string Al2, string InputSize, string InputOrder)
 		if (Order[_order] == InputOrder)
 			break;
 	int x1 = 0, x2 = 0;// stand for type of Sort
-	for (int x1 = 0; x1 < 11; x1++)
+	for ( x1 = 0; x1 < 11; x1++)
 		if (sort_names[x1] == Al1)
 			break;
-	for (int x2 = 0; x2 < 11; x2++)
-		if (sort_names[x2] == Al1)
+	for ( x2 = 0; x2 < 11; x2++)
+		if (sort_names[x2] == Al2)
 			break;
 
 	string InputFileName = NameInputFile[_order];
@@ -109,8 +110,9 @@ void command5(string Al1, string Al2, string InputSize, string InputOrder)
 	cout << "Runtime: " << time1 << " | " << time2 << endl;
 
 	// Comparison
-	long long int com1 = 0, com2 = 0;
+	long long int com1 = 0;
 	COUNT_SortAl(c, n, x1, com1);
+	long long int com2 = 0;
 	COUNT_SortAl(d, n, x2, com2);
 	cout << "Comparisons: " << com1 << " | " << com2 << endl;
 }

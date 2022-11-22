@@ -33,9 +33,10 @@ int main(int argc, char* argv[])
                     command5(argv[2], argv[3], argv[4], argv[5]);
             }
 
-
-
-
+    /*string Al1 = "heap-sort", Al2 = "selection-sort", InputFile;
+    InputFile = "input.txt";
+    command4(Al1, Al2, InputFile);*/
+    
 
 
 
