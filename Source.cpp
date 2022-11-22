@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <iomanip>
 using namespace std;
 
 
@@ -33,14 +34,8 @@ int main(int argc, char* argv[])
                     command5(argv[2], argv[3], argv[4], argv[5]);
             }
 
-    /*string Al1 = "heap-sort", Al2 = "selection-sort", InputFile;
-    InputFile = "input.txt";
-    command4(Al1, Al2, InputFile);*/
-    
-
-
-
-
+    //string Al1 = "heap-sort", Al2 = "couting-sort", InputSize = "5", InputOrder = "-rand";
+    //command5(Al1, Al2, InputSize, InputOrder);
 
     //int size[6] = { 10000, 30000, 50000, 100000, 300000, 500000 };
     //vector <string> Name = { "SelectionSort", "Insertion_Sort", "Bubble_sort", "Shaker_Sort", "Shell_Sort", "Heap_Sort" , "Merge_Sort" , "Quick_Sort" , "Counting_Sort", "Radix_Sort", "Flash_Sort" };
@@ -77,7 +72,7 @@ int main(int argc, char* argv[])
     //            end = clock();
     //            double time_use = (double)(end - start) / CLOCKS_PER_SEC * 1000;
     //            fout << "       " << time_use << endl;
-    //            cout << "       " << time_use << endl;
+    //            cout << fixed << "       " << time_use << endl;
     //            delete[] b;
 
 

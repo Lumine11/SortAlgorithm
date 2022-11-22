@@ -3,7 +3,7 @@
 #include"GenerateData.h" // header chứa Generate Data
 #include"Timing.h" // header chứ các thuật toán sắp xếp _ đo thời gian
 #include "CountingComparision.h"// header chứa các thuật toán sắp xếp - đo số lần so sánh
-
+#include <iomanip>
 #include <string>
 
 
@@ -51,7 +51,7 @@ void command4(string Al1, string Al2, string InputFile)
 	end2 = clock();
 	time1 = (double)(end1 - start1) / CLOCKS_PER_SEC * 1000;
 	time2 = (double)(end2 - start2) / CLOCKS_PER_SEC * 1000;
-	cout << "Runtime: " << time1 << " | " << time2 << endl;
+	cout << "Runtime: " << fixed << time1 << " | " << fixed << time2 << endl;
 
 	// Comparison
 	long long int com1 = 0;
@@ -107,7 +107,7 @@ void command5(string Al1, string Al2, string InputSize, string InputOrder)
 	end2 = clock();
 	time1 = (double)(end1 - start1) / CLOCKS_PER_SEC * 1000;
 	time2 = (double)(end2 - start2) / CLOCKS_PER_SEC * 1000;
-	cout << "Runtime: " << time1 << " | " << time2 << endl;
+	cout  << "Runtime: " <<  fixed << time1 << " | " <<  fixed << time2 << endl;
 
 	// Comparison
 	long long int com1 = 0;
