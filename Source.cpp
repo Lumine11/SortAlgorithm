@@ -18,18 +18,18 @@ int main(int argc, char* argv[])
         if (argc == 5) {
             if (_stricmp(argv[1], "-a") == 0) { // khác nhau giữa 1 và 3 là InputSize và Filename
                 ifstream fin(argv[3]);
-                //if (!fin)
-                //    command3();// Không tồn tại file => đây là size
-                //else
-                //    command1();
+                if (!fin)
+                     command3(argv[2], argv[3], argv[4]);// Không tồn tại file => đây là size
+                else
+                    command1(argv[2], argv[3], argv[4]);
             }
             else
                 command4(argv[2], argv[3], argv[4]);
         }
         else
             if (argc == 6) {
-                if (_stricmp(argv[1], "-a") == 0);
-                  //  command2();
+                if (_stricmp(argv[1], "-a") == 0)
+                    command2(argv[2], argv[3], argv[4], argv[5]);
                 else
                     command5(argv[2], argv[3], argv[4], argv[5]);
             }
