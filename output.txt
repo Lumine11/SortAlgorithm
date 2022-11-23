@@ -1,43 +1,111 @@
 Data order:RandomData
 Data size10000
        Kind of sort: SelectionSort
-       56
+       61
        100009999
        Kind of sort: Insertion_Sort
-       38
-       49749750
+       40
+       49408579
        Kind of sort: Bubble_sort
-       696
+       758
        100009999
        Kind of sort: Shaker_Sort
-       617
-       66254647
+       636
+       65857190
        Kind of sort: Shell_Sort
-       2
-       655643
+       1
+       653897
        Kind of sort: Heap_Sort
        3
-       638071
+       638492
        Kind of sort: Merge_Sort
-       18
-       409976
+       17
+       410020
        Kind of sort: Quick_Sort
        1
-       371410
+       368339
        Kind of sort: Counting_Sort
        0
-       80001
+       79995
        Kind of sort: Radix_Sort
-       1
+       0
        140058
        Kind of sort: Flash_Sort
        0
-       96763
+       99648
 Data size30000
        Kind of sort: SelectionSort
-       496
+       463
        900029999
        Kind of sort: Insertion_Sort
-       334
-       449945801
+       313
+       445836230
+       Kind of sort: Bubble_sort
+       5857
+       900029999
+       Kind of sort: Shaker_Sort
+       5074
+       594824562
+       Kind of sort: Shell_Sort
+       8
+       2267800
+       Kind of sort: Heap_Sort
+       13
+       2150361
+       Kind of sort: Merge_Sort
+       64
+       1370221
+       Kind of sort: Quick_Sort
+       4
+       1266847
+       Kind of sort: Counting_Sort
+       0
+       239998
+       Kind of sort: Radix_Sort
+       2
+       510072
+       Kind of sort: Flash_Sort
+       1
+       288282
+Data size50000
+       Kind of sort: SelectionSort
+       1376
+       2500049999
+       Kind of sort: Insertion_Sort
+       920
+       1251492592
+       Kind of sort: Bubble_sort
+       17452
+       2500049999
+       Kind of sort: Shaker_Sort
+       15680
+       1669472592
+       Kind of sort: Shell_Sort
+       10
+       4530211
+       Kind of sort: Heap_Sort
+       21
+       3772106
+       Kind of sort: Merge_Sort
+       95
+       2398608
+       Kind of sort: Quick_Sort
+       10
+       2098609
+       Kind of sort: Counting_Sort
+       1
+       348305
+       Kind of sort: Radix_Sort
+       3
+       850072
+       Kind of sort: Flash_Sort
+       1
+       500175
+Data size100000
+       Kind of sort: SelectionSort
+       6000
+       10000099999
+       Kind of sort: Insertion_Sort
+       3979
+       5009311002
        Kind of sort: Bubble_sort

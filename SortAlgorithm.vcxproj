@@ -25,6 +25,7 @@
     <ClInclude Include="CountingComparision.h" />
     <ClInclude Include="GenerateData.h" />
     <ClInclude Include="cmd.h" />
+    <ClInclude Include="Experiments.h" />
     <ClInclude Include="Timing.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -129,6 +130,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>3000000000</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

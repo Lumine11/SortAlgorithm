@@ -166,7 +166,6 @@ void command2(string Alg, string inputSize, string  inputOrder, string Outputpar
 		fout_out << a[i] << " ";
 	fout_out << a[n - 1]; // để không dư dấu cách cuối file
 	fout_out.close();
-
 }
 void command3(string Alg, string inputSize, string Outputpara) {
 	cout << "ALGORITHM MODE" << endl;
@@ -180,39 +179,29 @@ void command3(string Alg, string inputSize, string Outputpara) {
 	cout << "Input size: " << n << endl << endl;
 
 	int* a = new int[n];
-	string Order[4] = { "Randomize","Reversed","Sorted","Nearly Sorted" }; // thứ tự đúng trong hàm generate data
-	int realNo[4] = { 0,2,1,3 };
+	string Order[4] = { "Randomize","Reversed","Sorted","Nearly Sorted" };
+	int realNo[4] = { 0,2,1,3 }; // chỉ số tương ứng dí switch case trong hàm Generate Data
+	string InputFile[4] = { "input_1.txt", "input_4.txt", "input_3.txt", "input_2.txt" }; // mảng lưu tên fileInput ứng với thứ tự từng kiểu dữ liệu trong Order
+
+
 	for (int i = 0; i < 4; i++) {
-		GenerateData(a, n, realNo[i]);
-		// write input 
-		string filename;
-		switch (i)
-		{
-		case 0: // i = 0, realNo[0] = 0 = random
-			filename = "input_1.txt";
-			break;
-		case 1: // i= 1,realNo[1] = 2 = rev
-			filename = "input_4.txt";
-			break;
-		case 2: // i= 2,realNo[2] = 1 = sorted
-			filename = "input_3.txt";
-			break;
-		case 3: // i= 3,realNo[3] = 3 = nearly sort
-			filename = "input_2.txt";
-			break;
-		default:
-			break;
-		}
-		ofstream fout(filename);
+
+		GenerateData(a, n, realNo[i]); // truyền vào số thứ tự ứng với kiểu dữ liệu
+
+		/////////// write input 
+		string filename = InputFile[i];
+		ofstream fout(filename); // lấy tên file ứng với kiểu dữ liệu "Random", "Reverse" ,....
 		if (!fout) {
 			cout << "cannot open input_x.txt in cmd3 ";
 			return;
 		}
-		fout << n << endl;
-		for (int i = 0; i < n - 1; i++)
+		fout << n << endl; // ghi n
+		for (int i = 0; i < n - 1; i++) // ghi từng phần tử trong mảng
 			fout << a[i] << " ";
 		fout << a[n - 1]; // để không dư dấu cách cuối file
 		fout.close();
+
+
 
 		cout << "Input order: " << Order[i] << endl;
 		cout << "------------------------------\n";
@@ -254,10 +243,6 @@ void command3(string Alg, string inputSize, string Outputpara) {
 		cout << endl<< endl;
 
 	}
-	
-
-
-
 }
 void command4(string Al1, string Al2, string InputFile)
 {
@@ -342,12 +327,17 @@ void command5(string Al1, string Al2, string InputSize, string InputOrder)
 
 	clock_t start1, end1, start2, end2;
 	double time1 = 0, time2 = 0;
+
+	// đo thời gian chạy
 	start1 = clock();
 	SortAl(a, n, x1);
 	end1 = clock();
+
 	start2 = clock();
 	SortAl(b, n, x2);
 	end2 = clock();
+
+	// in ra màn hình 
 	time1 = (double)(end1 - start1) / CLOCKS_PER_SEC * 1000;
 	time2 = (double)(end2 - start2) / CLOCKS_PER_SEC * 1000;
 	cout  << "Runtime: " <<  fixed << time1 << " | " <<  fixed << time2 << endl;
@@ -355,7 +345,10 @@ void command5(string Al1, string Al2, string InputSize, string InputOrder)
 	// Comparison
 	long long int com1 = 0;
 	COUNT_SortAl(c, n, x1, com1);
+
 	long long int com2 = 0;
 	COUNT_SortAl(d, n, x2, com2);
+
+	// in kq ra màn hình
 	cout << "Comparisons: " << com1 << " | " << com2 << endl;
 }
