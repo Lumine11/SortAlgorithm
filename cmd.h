@@ -178,7 +178,6 @@ void command3(string Alg, string inputSize, string Outputpara) {
 	int n = stoi(inputSize);
 	cout << "Input size: " << n << endl << endl;
 
-	int* a = new int[n];
 	string Order[4] = { "Randomize","Reversed","Sorted","Nearly Sorted" };
 	int realNo[4] = { 0,2,1,3 }; // chỉ số tương ứng dí switch case trong hàm Generate Data
 	string InputFile[4] = { "input_1.txt", "input_4.txt", "input_3.txt", "input_2.txt" }; // mảng lưu tên fileInput ứng với thứ tự từng kiểu dữ liệu trong Order
@@ -186,6 +185,7 @@ void command3(string Alg, string inputSize, string Outputpara) {
 
 	for (int i = 0; i < 4; i++) {
 
+		int* a = new int[n];
 		GenerateData(a, n, realNo[i]); // truyền vào số thứ tự ứng với kiểu dữ liệu
 
 		/////////// write input 
@@ -195,13 +195,13 @@ void command3(string Alg, string inputSize, string Outputpara) {
 			cout << "cannot open input_x.txt in cmd3 ";
 			return;
 		}
+		if (filename == "input_4.txt")
+		fout << "\xEF\xBB\xBF"; //  This is the UTF-8 byte order mark - identify the file as UTF-8.
 		fout << n << endl; // ghi n
 		for (int i = 0; i < n - 1; i++) // ghi từng phần tử trong mảng
 			fout << a[i] << " ";
 		fout << a[n - 1]; // để không dư dấu cách cuối file
 		fout.close();
-
-
 
 		cout << "Input order: " << Order[i] << endl;
 		cout << "------------------------------\n";
@@ -241,7 +241,7 @@ void command3(string Alg, string inputSize, string Outputpara) {
 			delete[] b;
 		}
 		cout << endl<< endl;
-
+		delete[] a;
 	}
 }
 void command4(string Al1, string Al2, string InputFile)
@@ -289,7 +289,6 @@ void command4(string Al1, string Al2, string InputFile)
 	cout << "Comparisons: " << com1 << " | " << com2 << endl;
 }
 
-string NameInputFile[] = { "input_1.txt","input_3.txt" ,"input_4.txt" ,"input_2.txt" };
 void command5(string Al1, string Al2, string InputSize, string InputOrder)
 {
 	cout << "COMPARE MODE" << endl;
@@ -308,7 +307,7 @@ void command5(string Al1, string Al2, string InputSize, string InputOrder)
 		if (sort_names[x2] == Al2)
 			break;
 
-	string InputFileName = NameInputFile[_order];
+	string InputFileName = "input.txt";
 	ofstream fout(InputFileName);
 	if (!fout)
 	{
