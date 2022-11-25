@@ -26,7 +26,7 @@
     <ClInclude Include="Timing.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="CountingComparision.h">
+    <ClInclude Include="CountingComparison.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="cmd.h">

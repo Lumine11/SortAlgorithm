@@ -22,7 +22,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CountingComparision.h" />
+    <ClInclude Include="CountingComparison.h" />
     <ClInclude Include="GenerateData.h" />
     <ClInclude Include="cmd.h" />
     <ClInclude Include="Experiments.h" />
